@@ -1,0 +1,115 @@
+{% extends "admin/master.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet">
+<link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+<script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+{% endblock head_css %}
+
+{% block body %}
+<script>
+new WOW().init();
+</script>
+<h1 class="text-center">TRỌNG VƯƠNG GENERAL CLINIC</h1>
+    <table class="table text-center">
+        <tr>
+            <td><a href="https://www.facebook.com/HuyTrong.27thSep">FACEBOOK</a></td>
+            <td>PHONE 0777574547</td>
+        </tr>
+    </table>
+    <h5 class="text-danger text-center wow slideInLeft">CHÚ TRỌNG CÔNG TÁC PHÒNG CHỐNG DỊCH BỆNH, VÌ SỨC KHỎE CỦA CỘNG ĐỒNG.YÊU CẦU:</h5>
+<div class="container text-center pt-3 pb-3">
+    <img alt="Virus" src="{{ url_for('static', filename='images/Corona.jpg') }}" width="500" height="300" class="wow rotateIn"/>
+</div>
+    <ul class="pt-3 pb-3 wow slideInLeft" >
+        <li class="pt-1 pb-1">
+            <a>1. Nghiêm túc chấp hành đeo khẩu trang khi ra vào phòng khám</a>
+        </li >
+        <li class="pt-1 pb-1">
+            <a>2. Kiểm tra thân nhiệt trước khi vào khám bệnh</a>
+        </li>
+        <li class="pt-1 pb-1">
+            <a>3. Rửa tay bằng dung dịch sát khuẩn trước khi vào phòng khám</a>
+        </li>
+        <li class="pt-1 pb-1">
+            <a>4. Giữ khoảng cách 2m giữa những người trong phòng khám</a>
+        </li>
+    </ul>
+<div class="pt-4 pb-4 wow flipInX">
+    <ul>
+        <h4 class="text-success text-center">CHẤT LƯỢNG PHÒNG MẠCH TRỌNG VƯƠNG</h4>
+        <li class="text-center pt-2 pb-2">
+        <img alt="Cross" src="{{ url_for('static', filename='images/Yte.jpg') }}" width="400" height="200"/>
+        </li>
+        <li class="pt-3 pb-3">
+            <a>- Với mục tiêu nâng cao chất lượng phòng khám Trọng Vương có tốt không theo đúng tiêu chuẩn quốc tế. Nhằm mang đến tiện nghi cũng như dịch vụ khám chữa bệnh tốt nhất cho bệnh nhân.</a>
+        </li>
+        <li>
+            <a>- Nên ngay từ những ngày đầu thành lập phòng khám hết sức chú trọng đầu tư cơ sở hạ tầng, trang thiết bị y tế. Đồng thời tuyển chọn kỹ lưỡng đội ngũ y bác sĩ giỏi chuyên môn giàu kinh nghiệm. Và quan trọng nhất là phòng khám chỉ tuyển chọn những bác sĩ có y đức thật sự. Việc tuyển chọn bác sĩ thường thông qua hình thức kiểm tra lai lịch hay nhân cách. Tất cả chỉ có một mục tiêu duy nhất là phục vụ tốt nhất công tác khám chữa bệnh.</a>
+        </li>
+</div>
+<div class="wow lightSpeedIn">
+        <li class="text-center pt-4">
+            <h4 class="text-success">ĐÁNH GIÁ CHẤT LƯỢNG PHÒNG KHÁM TRỌNG VƯƠNG</h4>
+        </li>
+        <li class="text-center pt-2 pb-2">
+            <img alt="khambenh" src="{{ url_for('static', filename='images/khambenh.png') }}" width="400" height="200"/>
+        </li>
+        <li class="pt-3 pb-3">
+            <a>
+                - Trong suốt quá trình khám chữa bệnh, tập thể lãnh đạo và y bác sĩ luôn lắng nghe ý kiến, chia sẻ, tâm nguyện của bệnh nhân. Điều đó giúp cho phòng khám chúng tôi biết được những thiếu sót để chúng tôi khắc phục và hoàn thiện mình hơn.
+
+                Thời gian vừa qua, đội ngũ lãnh đạo của phòng khám chúng tôi rất vui mừng khi nhận được nhiều ý kiến đóng góp chân thành từ các bệnh nhân. Qua đó, chúng tôi cũng xin gửi lời cảm ơn chân thành nhất đến quý bệnh nhân. Chúng tôi cảm ơn tất cả những bệnh nhân đã góp ý kiến tích cực của mình trên mạng xã hội, diễn đàn. Điều đó thật sự đã giúp ích cho phòng khám rất nhiều. Nhờ đó mà mọi người có thể biết đến phòng khám Trọng Vương nhiều hơn.
+
+                Đó là nguồn động viên lớn nhất để phòng khám Trọng Vương không ngừng học hỏi, tiếp thu thêm kiến thức y khoa. Đồng thời nâng cao chất lượng dịch vụ khám chữa bệnh tốt hơn. Nhằm mục tiêu bảo vệ sức khỏe toàn diện cho mọi người xứng đáng với niềm tin của bệnh nhân đối với phòng khám.
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="pt-4 pb-4 wow lightSpeedIn">
+    <ul>
+        <li class="text-center text-warning pt-4">
+            <h4>TUYỂN DỤNG TẠI PHÒNG KHÁM TRỌNG VƯƠNG</h4>
+        </li>
+        <li class="text-center pt-2 pb-2">
+            <img alt="tuyendung" src="{{ url_for('static', filename='images/tuyendung.jpg') }}" width="200" height="200"/>
+        </li>
+        <li class="pt-3 pb-3">
+            <a>- Được sàng lọc từ vòng xét tuyển hồ sơ, có thể nói ban lãnh đạo đã rất sáng suốt trong việc phỏng vấn, kiểm tra nghiêm từ những bác sĩ, y tá, điều dưỡng nữ,… đến cán bộ/công nhân viên tại Phòng Khám Trọng Vương đều phải đạt ngưỡng trình độ từ Cao Đẳng, Đại Học trở lên, nhằm mang đến sự chuyên nghiệp nhất cho bện nhân.</a>
+        </li>
+    </ul>
+</div>
+<div class="pt-5 pb-5">
+    <h6 class="pb-3 pt-3 text-primary text-right">LIÊN HỆ PHÒNG KHÁM TRỌNG VƯƠNG</h6>
+    <ul class="text-danger text-right">
+        <li class="pt-1 pb-1">
+            <a href="https://www.google.com/maps/place/258+Nguy%E1%BB%85n+V%C4%83n+C%C3%B4ng,+Ph%C6%B0%E1%BB%9Dng+15,+T%C3%A2n+B%C3%ACnh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.8225234,106.6718163,17z/data=!3m1!4b1!4m5!3m4!1s0x3175291d25411749:0x63f9d3590400d049!8m2!3d10.8225234!4d106.674005" class="text-danger">Cơ sở 1: 258 Nguyễn Văn Công P.4 Q.Gò Vấp tp.HCM</a>
+        </li>
+        <li class="pt-1 pb-1">
+            <a href="https://www.google.com/maps/place/333+Chu+V%C4%83n+An,+Ph%C6%B0%E1%BB%9Dng+12,+B%C3%ACnh+Th%E1%BA%A1nh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.8113501,106.695278,17z/data=!3m1!4b1!4m5!3m4!1s0x317528ea8409edd5:0x6153db94692de51!8m2!3d10.8113501!4d106.6974667" class="text-danger">Cơ sở 2: 333 Chu Văn An P.12 Q.Bình Thạnh tp.HCM </a>
+        </li>
+        <li class="pt-1 pb-1">
+            <a>Gmail: 1821050160trong@gmail.com</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+{% block tail %}
+<div class="container bg-dark text-white">
+    <ul class="text-right pt-2 pb-2">
+        <li>
+            <a>PHÒNG KHÁM TRỌNG VƯƠNG</a>
+        </li>
+        <li>
+            <a>VÌ SỨC KHỎE CỘNG ĐỒNG</a>
+        </li>
+        <li>
+            <a>Khám Bệnh Từ 8h00 đển 20h00 tất cả các ngày trong tuần</a>
+        </li>
+        <li>
+            <a>HOTLINE: 0777.574.547</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

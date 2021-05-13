@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet" />
+    <link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script>new WOW().init();</script>
+</head>
+<body style="background-color:lightblue;">
+<div class="container">
+    <h1 class="text-center wow bounceIn">WEBSITE QUẢN LÝ PHÒNG MẠCH TƯ</h1>
+    <h4><a href="{{ url_for('register') }}"> Đăng ký </a></h4>
+    <h4><a href="{{ url_for('login_admin') }}"> Đăng nhập trang quản trị </a></h4>
+    <h4><a href="{{ url_for('medical_checklist') }}">Danh sách khám bệnh</a></h4>
+    <div class="text-center wow slideInLeft my-5">
+        <img src="{{ url_for('static', filename='images/heath_care.png') }}" width="1200" height="500">
+    </div>
+</div>
+</body>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"> Với mục tiêu nâng cao chất lượng phòng khám <i> Trọng Vương </i> phục vụ theo đúng tiêu chuẩn quốc tế. Nhằm mang đến tiện nghi cũng như dịch vụ khám chữa bệnh tốt nhất cho bệnh nhân.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Time In Work</h6>
+              <a>Khám Bệnh Từ 8h00 đển 20h00 tất cả các ngày trong tuần</a>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+                <a href="https://www.facebook.com/HuyTrong.27thSep"> FACEBOOK </a>
+                <a class="text-important"> CONTACT US(0777574547) </a>
+                <a href=https://www.google.com/maps/place/258+Nguy%E1%BB%85n+V%C4%83n+C%C3%B4ng,+Ph%C6%B0%E1%BB%9Dng+15,+T%C3%A2n+B%C3%ACnh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.8225234,106.6718163,17z/data=!3m1!4b1!4m5!3m4!1s0x3175291d25411749:0x63f9d3590400d049!8m2!3d10.8225234!4d106.674005>SITEMAP</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights <Reserved></Reserved>
+            </p>
+          </div>
+        </div>
+      </div>
+</footer>
+</html>

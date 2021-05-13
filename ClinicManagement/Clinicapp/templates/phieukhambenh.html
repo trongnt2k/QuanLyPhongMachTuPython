@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet" />
+</head>
+<body style="background-color:lightblue;">
+<div class="container">
+    <h1 class="text-center text-danger">PHIẾU KHÁM BỆNH</h1>
+    <table class="table">
+        <tr>
+            <td>Họ và tên: {{ patient.name }}</td>
+            <td>Triệu chứng: {{ phieukham.trieuchung }}</td>
+        </tr>
+        <tr>
+            <td>Ngày khám: {{ patient.ngaykham }}</td>
+            <td>Dự đoán loại bệnh: {{ loaibenh.name }}</td>
+        </tr>
+    </table>
+    <h2 class="text-center text-success">Đơn Thuốc</h2>
+    <table class="table">
+        <tr>
+            <th>Thuốc</th>
+            <th>Đơn Vị</th>
+            <th>Số Lượng</th>
+            <th>Cách Dùng</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <input type="button"
+               onclick="pay()"
+               value="Thanh Toán"
+               class="btn btn-danger">
+    </div>
+</div>
+</body>
+</html>

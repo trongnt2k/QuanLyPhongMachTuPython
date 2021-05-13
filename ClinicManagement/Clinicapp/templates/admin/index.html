@@ -1,0 +1,55 @@
+{% extends "admin/master.html" %}
+
+{% block head_css %}
+{{ super() }}
+<link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet">
+<link rel='stylesheet' href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+<script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+{% endblock head_css %}
+
+{% block body %}
+    {% if current_user.is_authenticated %}
+<script>
+new WOW().init();
+</script>
+<h1 class="text-center">WELCOME TO ADMIN PAGES</h1>
+<div class="container wow rotateInUpRight">
+<h2 class="text-center text-danger pt-5">NỘI QUY</h2>
+    <ul class="pt-3">
+        <ol>
+            <li><a>1. Nghiệm túc thực hiện 12 điều Y đức của người thầy thuốc. Khi giao tiếp với bệnh nhân và người nhà của bệnh nhân phải niềm nở, lễ phép, tận tình chu đáo. Đối với bệnh nhân nặng, nhân viên đón tiếp hỗ trợ thân nhân đưa người bệnh đến bàn khám của bác sĩ.</a></li>
+            <li class="pt-2"><a>2. Đối với bệnh nhân/khách hàng là người nước ngoài, phải có thái độ giao tiếp lịch sự, trọng thị và tôn trọng phong tục tập quán của khách theo đúng quy định luật pháp của Nhà nước Việt Nam.</a></li>
+            <li class="pt-2"><a>3. Tác phong làm việc nhanh nhẹn, trang phục gọn gàng, sạch sẽ. Không làm việc riêng hoặc nói chuyện ồn ào trong giờ làm việc. Không phát ngôn bừa bãi trước bệnh nhân. Không vào nơi làm việc của các khoa/phòng khác khi không có nhiệm vụ được phân công.</a></li>
+            <li class="pt-2"><a>4. Khi có sự cố xảy ra tại Phòng khám, phải báo ngay cho Trưởng phòng khám hoặc người thay thế hoặc Ban Lãnh đạo công ty tìm phương hướng giải quyết, khắc phục sự cố.</a></li>
+            <li class="pt-2"><a>5. Có ý thức tiết kiệm điện, nước, giữ gìn bảo vệ tài sản chung, không dùng điện thoại cơ quan giải quyết việc riêng.</a></li>
+            <li class="pt-2"><a>6. Chú ý giữ gìn vệ sinh chung, đảm bảo phòng khám luôn sạch sẽ, gọn gàng, ngăn nắp</a></li>
+            <li class="pt-2"><a>7. Cán bộ công nhân viên phải tự giác học tập nâng cao trình độ chuyên môn, nâng cao năng lực hoàn thành nhiệm vụ, luôn đoàn kết tương trợ đồng nghiệp.</a></li>
+        </ol>
+    </ul>
+</div>
+<div class="container wow bounce pt-5">
+    <h2 class="text-center text-danger pt-5">THÔNG BÁO</h2>
+    <div class="text-right">
+        <p><b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b></p>
+        <p class="mr-5"><b>Độc lập - Tự do - Hạnh phúc</b></p>
+    </div>
+    <div>
+        <p class="text-center"><b>(V/v họp định kỳ hàng tháng)</b></p>
+        <p class="text-center"><b>Nhằm nâng cao hiệu quả quản lý, sự phối hợp và hiệu suất trong công việc phòng khám Trọng Vương </p></b>
+        <p><b>Nội dung:</b> Các cá nhân, đơn vị chuẩn bị trước những nội dung báo cáo công việc liên quan và lập công việc tiếp theo cho cuộc họp định kỳ hàng tháng. Trước khi họp sẽ thông báo thời gian và địa điểm đến các cá nhân, đơn vị. Lưu ý thời gian cuộc họp để chuẩn bị thật kĩ càng cho cuộc họp.</p>
+    </div>
+    <div class="text-right">
+        <p><b>TRƯỞNG PHÒNG KHÁM</b></p>
+        <p class="mr-4">(Ký, ghi rõ họ tên)</p>
+        <p class="mr-5 pr-3">Trọng</p>
+        <p class="pr-3">Nguyễn Huy Trọng</p>
+    </div>
+</div>
+<div class="container text-center">
+    <img alt="iconYDuoc" src="{{ url_for('static', filename='images/iconYD.jpg') }}" />
+</div>
+    {% else %}
+        {% include "admin/login.html" %}
+    {% endif %}
+{% endblock %}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet" />
+</head>
+<body style="background-color:lightblue;">
+<div class="container">
+    <h1 class="text-center text-success">DANH SÁCH KHÁM BỆNH</h1>
+    <div>
+            <form>
+                <div class="form-group">
+                    <input placeholder="Nhập tên bệnh nhân tìm kiếm..."
+                           name="kw"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="Nhập giới tính tìm kiếm..."
+                           name="gender"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="Nhập ngày sinh tìm kiếm (năm-tháng-ngày)..."
+                           name="date_of_birth"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input placeholder="Nhập ngày khám tìm kiếm (năm-tháng-ngày)..."
+                           name="ngaykham"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit"
+                           class="btn btn-danger"
+                           value="Tìm kiếm" />
+                </div>
+            </form>
+        </div>
+        <table class="table">
+            <tr>
+                <th>Id</th>
+                <th>Tên</th>
+                <th>Giới Tính</th>
+                <th>Năm Sinh</th>
+                <th>Ngày Khám</th>
+                <th>Chi Tiết</th>
+            </tr>
+            {% for p in patient %}
+            <tr>
+                <td>{{ p.id }}</td>
+                <td>{{ p.name }}</td>
+                <td>{{ p.gender }}</td>
+                <td>{{ p.date_of_birth }}</td>
+                <td>{{ p.ngaykham }}</td>
+                <td><a href="{{ url_for('phieukham_detail', patient_id=p.id) }}">Thanh Toán Phiếu Khám</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+</div>
+</body>
+</html>
